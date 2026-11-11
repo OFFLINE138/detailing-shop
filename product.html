@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка товара — DetailPro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    .product-single { 
+        display: none; 
+    }
+    
+    .product-single:target { 
+        display: grid; 
+    }
+
+    body:not(:has(.product-single:target)) .product-single:first-of-type { 
+        display: grid; 
+    }
+    
+    .product-single {
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+    @media (max-width: 768px) {
+        .product-single { grid-template-columns: 1fr; }
+    }
+</style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+        <a href="index.html" class="logo">Detail<span>Pro</span></a>
+        <nav class="nav">
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О магазине</a>
+        </nav>
+        <div class="cart" id="open-cart-btn" style="cursor: pointer;">
+            🛒 Корзина: <span id="cart-count">0</span>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <p style="margin-top: 20px;"><a href="catalog.html" style="color: #9a9a9a; font-size: 14px;">← Назад в каталог</a></p>
+
+    <!-- ================= ТОВАР 1 ================= -->
+    <div id="shampoo-shine" class="product-single">
+        <div class="product-page__media">
+            <img src="images/shampoo-shine.png" alt="Шампунь ShineSystems Active Foam">
+        </div>
+        <div class="product-page__info">
+            <h1>Шампунь бесконтактный ShineSystems Active Foam, 1 л</h1>
+            <p class="price price--big">890 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Тип</th><td>Бесконтактный шампунь</td></tr>
+                <tr><th>Объём</th><td>1 л</td></tr>
+                <tr><th>Концентрация</th><td>1:50 – 1:100</td></tr>
+                <tr><th>pH</th><td>12 (щелочной)</td></tr>
+                <tr><th>Расход</th><td>≈ 20–40 моек</td></tr>
+                <tr><th>Производитель</th><td>ShineSystems</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 2 ================= -->
+    <div id="shampoo-leraton" class="product-single">
+        <div class="product-page__media">
+            <img src="images/shampoo-leraton.png" alt="Шампунь LERATON Hand Wash">
+        </div>
+        <div class="product-page__info">
+            <h1>Шампунь для ручной мойки LERATON Hand Wash, 1 л</h1>
+            <p class="price price--big">650 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Тип</th><td>Шампунь для ручной мойки</td></tr>
+                <tr><th>Объём</th><td>1 л</td></tr>
+                <tr><th>Концентрация</th><td>1:100</td></tr>
+                <tr><th>pH</th><td>7.5 (нейтральный)</td></tr>
+                <tr><th>Аромат</th><td>Bubble Gum</td></tr>
+                <tr><th>Производитель</th><td>LERATON</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 3 ================= -->
+    <div id="cleaner-wheel" class="product-single">
+        <div class="product-page__media">
+            <img src="images/wheel-FoamHeroes.png" alt="Очиститель дисков FoamHeroes">
+        </div>
+        <div class="product-page__info">
+            <h1>Очиститель дисков FoamHeroes Wheel Cleaner, 500 мл</h1>
+            <p class="price price--big">740 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Тип</th><td>Кислотный очиститель</td></tr>
+                <tr><th>Объём</th><td>500 мл</td></tr>
+                <tr><th>Цвет индикатора</th><td>Фиолетовый</td></tr>
+                <tr><th>Применение</th><td>Удаление нагара и пыли</td></tr>
+                <tr><th>Производитель</th><td>FoamHeroes</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 4 ================= -->
+    <div id="cleaner-bitum" class="product-single">
+        <div class="product-page__media">
+            <img src="images/cleaner-bitum.png" alt="Очиститель битума ShineSystems">
+        </div>
+        <div class="product-page__info">
+            <h1>Очиститель битумных пятен ShineSystems Tar Remover, 500 мл</h1>
+            <p class="price price--big">620 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Тип</th><td>Растворитель</td></tr>
+                <tr><th>Объём</th><td>500 мл</td></tr>
+                <tr><th>Для чего</th><td>Удаление битума и клея</td></tr>
+                <tr><th>Безопасность</th><td>Безопасен для ЛКП</td></tr>
+                <tr><th>Производитель</th><td>ShineSystems</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 5 ================= -->
+    <div id="paste-leraton" class="product-single">
+        <div class="product-page__media">
+            <img src="images/paste-leraton.png" alt="Паста полировальная LERATON Cut 400">
+        </div>
+        <div class="product-page__info">
+            <h1>Паста полировальная LERATON Cut 400, 250 г</h1>
+            <p class="price price--big">1290 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Абразивность</th><td>Высокая (Cut 400)</td></tr>
+                <tr><th>Вес</th><td>250 г</td></tr>
+                <tr><th>Тип</th><td>Абразивная, для удаления царапин</td></tr>
+                <tr><th>Применение</th><td>Ротор / DA машинка</td></tr>
+                <tr><th>Производитель</th><td>LERATON</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 6 ================= -->
+    <div id="pad-shine" class="product-single">
+        <div class="product-page__media">
+            <img src="images/pad-shine.png" alt="Круг полировальный ShineSystems">
+        </div>
+        <div class="product-page__info">
+            <h1>Круг полировальный ShineSystems Foam, 150 мм</h1>
+            <p class="price price--big">450 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Тип</th><td>Жёсткий поролон</td></tr>
+                <tr><th>Диаметр</th><td>150 мм</td></tr>
+                <tr><th>Крепление</th><td>Липучка (Velcro)</td></tr>
+                <tr><th>Назначение</th><td>Для абразивной полировки</td></tr>
+                <tr><th>Производитель</th><td>ShineSystems</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 7 ================= -->
+    <div id="machine" class="product-single">
+        <div class="product-page__media">
+            <img src="images/machine.png" alt="Машинка FoamHeroes DA-15">
+        </div>
+        <div class="product-page__info">
+            <h1>Машинка полировальная эксцентриковая FoamHeroes DA-15</h1>
+            <p class="price price--big">8900 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Тип</th><td>Эксцентриковая (DA)</td></tr>
+                <tr><th>Мощность</th><td>900 Вт</td></tr>
+                <tr><th>Диаметр круга</th><td>125–150 мм</td></tr>
+                <tr><th>Обороты</th><td>2000–6000 об/мин</td></tr>
+                <tr><th>Производитель</th><td>FoamHeroes</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 8 ================= -->
+    <div id="ceramic" class="product-single">
+        <div class="product-page__media">
+            <img src="images/ceramic.jpg" alt="Керамика FoamHeroes">
+        </div>
+        <div class="product-page__info">
+            <h1>Керамическое покрытие FoamHeroes Ceramic 9H, 50 мл</h1>
+            <p class="price price--big">3500 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Твёрдость</th><td>9H</td></tr>
+                <tr><th>Объём</th><td>50 мл</td></tr>
+                <tr><th>Срок службы</th><td>до 24 месяцев</td></tr>
+                <tr><th>Расход</th><td>≈ 1 авто на 30–50 мл</td></tr>
+                <tr><th>Производитель</th><td>FoamHeroes</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 9 ================= -->
+    <div id="wax" class="product-single">
+        <div class="product-page__media">
+            <img src="images/wax.png" alt="Воск ShineSystems">
+        </div>
+        <div class="product-page__info">
+            <h1>Воск твёрдый ShineSystems Hard Wax, 200 г</h1>
+            <p class="price price--big">1150 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Тип</th><td>Твёрдый воск (паста)</td></tr>
+                <tr><th>Вес</th><td>200 г</td></tr>
+                <tr><th>Стойкость</th><td>до 3 месяцев</td></tr>
+                <tr><th>Эффект</th><td>Глубокий блеск</td></tr>
+                <tr><th>Производитель</th><td>ShineSystems</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 10 ================= -->
+    <div id="microfiber" class="product-single">
+        <div class="product-page__media">
+            <img src="images/microfiber.png" alt="Микрофибра ShineSystems">
+        </div>
+        <div class="product-page__info">
+            <h1>Микрофибра ShineSystems Dry 600 г/м², 40×40 см</h1>
+            <p class="price price--big">350 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Плотность</th><td>600 г/м²</td></tr>
+                <tr><th>Размер</th><td>40×40 см</td></tr>
+                <tr><th>Назначение</th><td>Сушка кузова</td></tr>
+                <tr><th>Кромка</th><td>Без швов (шелкография)</td></tr>
+                <tr><th>Производитель</th><td>ShineSystems</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 11 ================= -->
+    <div id="brush" class="product-single">
+        <div class="product-page__media">
+            <img src="images/brush.png" alt="Щётка FoamHeroes">
+        </div>
+        <div class="product-page__info">
+            <h1>Щётка для дисков FoamHeroes Wheel Brush</h1>
+            <p class="price price--big">520 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Тип</th><td>Щётка с мягкой щетиной</td></tr>
+                <tr><th>Длина ручки</th><td>30 см</td></tr>
+                <tr><th>Назначение</th><td>Очистка колёсных дисков</td></tr>
+                <tr><th>Материал</th><td>Ворс + пластик</td></tr>
+                <tr><th>Производитель</th><td>FoamHeroes</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 12 ================= -->
+    <div id="foamgun" class="product-single">
+        <div class="product-page__media">
+            <img src="images/foamgun.jpg" alt="Пеногенератор ShineSystems">
+        </div>
+        <div class="product-page__info">
+            <h1>Пеногенератор ShineSystems Foam Gun Pro, 1 л</h1>
+            <p class="price price--big">2300 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Объём бачка</th><td>1 л</td></tr>
+                <tr><th>Тип</th><td>Пневматический</td></tr>
+                <tr><th>Регулировка пены</th><td>Есть</td></tr>
+                <tr><th>Соединение</th><td>Quick Connect</td></tr>
+                <tr><th>Производитель</th><td>ShineSystems</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 13 ================= -->
+    <div id="washer" class="product-single">
+        <div class="product-page__media">
+            <img src="images/avd.jpg" alt="Мойка FoamHeroes">
+        </div>
+        <div class="product-page__info">
+            <h1>Мойка высокого давления FoamHeroes 150 bar</h1>
+            <p class="price price--big">14500 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Макс. давление</th><td>150 бар</td></tr>
+                <tr><th>Производительность</th><td>450 л/ч</td></tr>
+                <tr><th>Мощность</th><td>2000 Вт</td></tr>
+                <tr><th>Насадки</th><td>3 шт. в комплекте</td></tr>
+                <tr><th>Производитель</th><td>FoamHeroes</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 14 ================= -->
+    <div id="kit-starter" class="product-single">
+        <div class="product-page__media">
+            <img src="images/kit-leather.png" alt="Набор ShineSystems">
+        </div>
+        <div class="product-page__info">
+            <h1>Стартовый набор ShineSystems Beginner Kit, 5 предметов</h1>
+            <p class="price price--big">2900 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Состав</th><td>Шампунь, микрофибра (2 шт.), аппликатор, перчатка</td></tr>
+                <tr><th>Для кого</th><td>Для новичков</td></tr>
+                <tr><th>Назначение</th><td>Базовая мойка и уход</td></tr>
+                <tr><th>Производитель</th><td>ShineSystems</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ================= ТОВАР 15 ================= -->
+    <div id="kit-pro" class="product-single">
+        <div class="product-page__media">
+            <img src="images/kit-pro.png" alt="Набор LERATON">
+        </div>
+        <div class="product-page__info">
+            <h1>Профессиональный набор LERATON Pro Kit, 8 предметов</h1>
+            <p class="price price--big">7500 ₽</p>
+            <button class="btn add-to-cart">В корзину</button>
+            <h2>Характеристики</h2>
+            <table class="specs">
+                <tr><th>Состав</th><td>Паста, 2 круга, микрофибра (3 шт.), перчатка, аппликатор</td></tr>
+                <tr><th>Для кого</th><td>Для профессионалов</td></tr>
+                <tr><th>Назначение</th><td>Полировка и защита</td></tr>
+                <tr><th>Производитель</th><td>LERATON</td></tr>
+            </table>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 DetailPro. Товары для детейлинга. Доставка по РФ.</p>
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">
+            Сайт создан в учебных целях. Все логотипы и товарные знаки принадлежат их правообладателям.
+        </p>
+    </div>
+</footer>
+
+<div id="cart-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+    <div style="background: #1a1a1a; border: 1px solid #333; padding: 30px; border-radius: 8px; width: 90%; max-width: 500px; position: relative;">
+        <button id="close-cart-btn" style="position: absolute; top: 10px; right: 15px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+        <h2 style="margin-bottom: 20px; color: white; border-bottom: 1px solid #333; padding-bottom: 10px;">Ваша корзина</h2>
+        <div id="cart-items" style="max-height: 300px; overflow-y: auto; margin-bottom: 20px;"></div>
+        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #333; padding-top: 15px; margin-bottom: 20px;">
+            <span style="font-size: 18px;">Итого:</span><span id="cart-total" style="font-size: 22px; color: #e63946; font-weight: bold;">0 ₽</span>
+        </div>
+        <button id="checkout-btn" class="btn" style="width: 100%; text-align: center;">Оформить заказ</button>
+    </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

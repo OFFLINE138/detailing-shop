@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог категорий — DetailPro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+        <a href="index.html" class="logo">Detail<span>Pro</span></a>
+        <nav class="nav">
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О магазине</a>
+        </nav>
+        <div class="cart" id="open-cart-btn" style="cursor: pointer;">
+            🛒 Корзина: <span id="cart-count">0</span>
+        </div>
+    </div>
+</header>
+
+<main class="container catalog">
+    <h1>Каталог товаров</h1>
+    <p style="color: #9a9a9a; margin-bottom: 30px;">Выберите нужную категорию, чтобы посмотреть товары.</p>
+
+    <div class="categories__grid">
+        <a href="category-chemistry.html" class="category-card">
+            <h3>Автохимия и очистители</h3>
+            <p>Шампуни, очистители кузова и дисков, обезжириватели</p>
+        </a>
+        <a href="category-polish.html" class="category-card">
+            <h3>Полировка</h3>
+            <p>Полировальные пасты, круги, машинки</p>
+        </a>
+        <a href="category-protection.html" class="category-card">
+            <h3>Защитные покрытия</h3>
+            <p>Керамика, воски, силанты и быстрые составы</p>
+        </a>
+        <a href="category-accessories.html" class="category-card">
+            <h3>Аксессуары и инструменты</h3>
+            <p>Микрофибра, кисти, вёдра, распылители</p>
+        </a>
+        <a href="category-equipment.html" class="category-card">
+            <h3>Оборудование</h3>
+            <p>Пылесосы, пеногенераторы, мойки высокого давления</p>
+        </a>
+        <a href="category-kits.html" class="category-card">
+            <h3>Наборы и расходники</h3>
+            <p>Стартовые и профессиональные комплекты</p>
+        </a>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 DetailPro. Товары для детейлинга. Доставка по РФ.</p>
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">
+            Сайт создан в учебных целях. Все логотипы и товарные знаки принадлежат их правообладателям.
+        </p>
+    </div>
+</footer>
+
+<div id="cart-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+    <div style="background: #1a1a1a; border: 1px solid #333; padding: 30px; border-radius: 8px; width: 90%; max-width: 500px; position: relative;">
+        <button id="close-cart-btn" style="position: absolute; top: 10px; right: 15px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+        <h2 style="margin-bottom: 20px; color: white; border-bottom: 1px solid #333; padding-bottom: 10px;">Ваша корзина</h2>
+        <div id="cart-items" style="max-height: 300px; overflow-y: auto; margin-bottom: 20px;"></div>
+        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #333; padding-top: 15px; margin-bottom: 20px;">
+            <span style="font-size: 18px;">Итого:</span>
+            <span id="cart-total" style="font-size: 22px; color: #e63946; font-weight: bold;">0 ₽</span>
+        </div>
+        <button id="checkout-btn" class="btn" style="width: 100%; text-align: center;">Оформить заказ</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
